@@ -1,0 +1,12 @@
+services:
+  consultant:
+    build: .
+    ports:
+      - "${PORT:-8000}:8000"
+    env_file:
+      - .env
+    environment:
+      PORT: "8000"
+    volumes:
+      - ./data:/app/data   # база знаний (data/kb), индекс эмбеддингов и SQLite с историей сессий
+    restart: unless-stopped
