@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+data/*.sqlite3
+# Данные кейса нельзя публиковать в открытых репозиториях
+data/kb/*
+!data/kb/README.md
+data/index/*.json
